@@ -222,20 +222,6 @@ speedBtns.forEach((btn) => {
     e.target.classList.add("active");
     // Map speed to corresponding speed interval
     speedInt = 10;
-    // switch (speed) {
-    //   case "Fast":
-    //     speedInt = -10;
-    //     break;
-    //   case "Average":
-    //     speedInt = 2;
-    //     break;
-    //   case "Slow":
-    //     speedInt = 50;
-    //     break;
-    //   case "noAnimation":
-    //     speedInt = 0;
-    //     break;
-    // }
     document.getElementById("speed").checked = false;
   });
 });
