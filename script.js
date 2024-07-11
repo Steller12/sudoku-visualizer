@@ -23,7 +23,7 @@ const grabGrid = () => {
 grid = grabGrid();
 algorithm = "algorithm-x";
 speed = "Fast";
-speedInt = 3;
+speedInt = 5;
 
 // Function to clear the Sudoku grid
 const clearGrid = () => {
@@ -221,7 +221,20 @@ speedBtns.forEach((btn) => {
     speedBtns.forEach((option) => option.classList.remove("active"));
     e.target.classList.add("active");
     // Map speed to corresponding speed interval
-    speedInt = 10;
+    switch (speed) {
+      case "Fast":
+        speedInt = 1;
+        break;
+      case "Average":
+        speedInt = 10;
+        break;
+      case "Slow":
+        speedInt = 50;
+        break;
+      case "noAnimation":
+        speedInt = 0;
+        break;
+    }
     document.getElementById("speed").checked = false;
   });
 });
@@ -292,7 +305,6 @@ const backtracking = (
       animate(animationList, speedInt);
       let duration = Date.now() - counter["startTime"];
       showAlert(
-        `Backtracking Algorithm solved the puzzle successfuly in ${duration} ms.`,
         "success"
       );
     }

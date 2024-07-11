@@ -52,7 +52,11 @@ nav>ul li {
     padding: 0.3rem;
     transition: all 0.1s linear;
 }
-
+nav>ul li:hover {
+    border-bottom: 3px solid #693f26;
+    font-size: 1.02rem;
+    font-weight: 1000;
+}
 li>input[type="checkbox"] {
     visibility: hidden;
 }
@@ -81,7 +85,7 @@ li>input[type="checkbox"]:checked~ul {
     display: block;
     list-style: none;
     position: absolute;
-    background: #69baed;
+    background: #000000;
     box-shadow: 1px 1px 10px rgb(7, 7, 7), -1px -1px 10px #705a5a;
     color: #fff;
     border-radius: 5px;
